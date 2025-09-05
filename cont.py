@@ -1,5 +1,7 @@
+#Global list to store contacts
 contact_storage = []
 
+#Function to display menu
 def display_menu():
     print("===== CONTACT STORAGE =====")
     print("1. Add Contact")
@@ -73,3 +75,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

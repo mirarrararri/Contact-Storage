@@ -10,7 +10,7 @@ def display_menu():
     print("4. Delete Contact")
     print("5. Exit")
     print("=" * 25)
-
+#Function to add contact
 def add_contact():
     name = input("Enter name: ").strip()
     phone_num = input("Enter phone number: ").strip()
@@ -19,7 +19,7 @@ def add_contact():
     contact = {"name": name, "phone_num": phone_num, "email": email}
     contact_storage.append(contact)
     print(f"Contact '{name}' ADDED SUCCESSFULLY!")
-
+#Function to view contact
 def view_contact():
     if not contact_storage:
         print("No contact available!")
@@ -29,7 +29,7 @@ def view_contact():
     for a, contact in enumerate(contact_storage, start=1):
         print(f"[{a}] {contact['name']} | {contact['phone_num']} | {contact['email']}")
     print("=" * 25)
-
+#Function to search contact
 def search_contact():
     name = input("Input name to search: ").strip().lower()
     found = False
@@ -42,7 +42,7 @@ def search_contact():
 
     if not found:
         print("Contact not found.")
-
+#Function to delete contact
 def delete_contact():
     delete_name = input("Enter name to delete: ").strip().lower()
     global contact_storage
@@ -53,7 +53,7 @@ def delete_contact():
         print(f"Contact '{delete_name}' DELETED SUCCESSFULLY.")
     else:
         print("Contact not found.")
-
+#Main function to start the program
 def main():
     while True:
         display_menu()
@@ -75,4 +75,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 

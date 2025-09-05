@@ -1,7 +1,7 @@
 #Global list to store contacts
 contact_storage = []
 
-#Function to display menu
+#Function to display the main menu
 def display_menu():
     print("===== CONTACT STORAGE =====")
     print("1. Add Contact")
@@ -10,7 +10,7 @@ def display_menu():
     print("4. Delete Contact")
     print("5. Exit")
     print("=" * 25)
-#Function to add contact
+#Function to add new contact
 def add_contact():
     name = input("Enter name: ").strip()
     phone_num = input("Enter phone number: ").strip()
@@ -19,7 +19,7 @@ def add_contact():
     contact = {"name": name, "phone_num": phone_num, "email": email}
     contact_storage.append(contact)
     print(f"Contact '{name}' ADDED SUCCESSFULLY!")
-#Function to view contact
+#Function to view all contact
 def view_contact():
     if not contact_storage:
         print("No contact available!")
@@ -53,7 +53,7 @@ def delete_contact():
         print(f"Contact '{delete_name}' DELETED SUCCESSFULLY.")
     else:
         print("Contact not found.")
-#Main function to start the program
+#Main program loop
 def main():
     while True:
         display_menu()
@@ -72,8 +72,9 @@ def main():
             break
         else:
             print("Invalid choice: Please enter number 1 to 5 only.")
-
+#Run program
 if __name__ == "__main__":
     main()
+
 
 

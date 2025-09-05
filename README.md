@@ -7,3 +7,6 @@ Features:
 - Search Contact– Find a contact by their name.
 - Delete Contact– Remove a contact by entering their name.
 - Exit Option– Quit the program safely.
+
+Author:
+Meralyn M. Ga-as
